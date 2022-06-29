@@ -1,0 +1,28 @@
+.container {
+  grid-area: frame;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  margin-top: 1rem;
+}
+
+.errorPopup {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0.5rem;
+  width: fit-content;
+  max-width: 50%;
+  background-color: red;
+  border-radius: 10px;
+}
+
+.errorPopup[data-error="false"] {
+  visibility: hidden;
+}
+
+.errorPopup[data-error="true"] {
+  visibility: visible;
+}

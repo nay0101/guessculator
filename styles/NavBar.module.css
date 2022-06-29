@@ -1,0 +1,4 @@
+.container {
+  grid-area: navbar;
+  display: flex;
+}

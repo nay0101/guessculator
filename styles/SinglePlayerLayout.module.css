@@ -1,0 +1,12 @@
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    "navbar"
+    "frame"
+    "keyboard";
+  grid-template-rows: fit-content(100%) 1fr fit-content(100%);
+  grid-template-columns: 1fr;
+  justify-items: center;
+  width: 100%;
+  height: 100vh;
+}
