@@ -40,7 +40,7 @@ const Frame = () => {
           isSubmitted={currentIndex !== index && guess !== null}
         />
       ))}
-      <button onClick={() => console.log(equation)}>Frame</button>
+      <button onClick={() => console.log(equation)}>Equation</button>
     </div>
   );
 };

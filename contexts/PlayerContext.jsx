@@ -21,14 +21,15 @@ const PlayerProvider = ({ children }) => {
     setEquation(equation);
   }, []);
 
-  const handleInput = (e) => {
+  const handleInput = (e, value = "") => {
+    const key = e.key || value;
     if (gameOver) return;
     const eqFilter = /^[0-9+\-*/=]|(Backspace|Enter)+$/;
     const temp_operators = ["+", "-", "*", "/"];
-    if (!eqFilter.test(e.key)) {
+    if (!eqFilter.test(key)) {
       return;
     }
-    if (e.key === "Enter") {
+    if (key === "Enter") {
       if (currentGuess.length !== EQUATION_LENGTH) {
         setError("You need to fill up the squares.");
         return;
@@ -115,12 +116,12 @@ const PlayerProvider = ({ children }) => {
       setCurrentGuess("");
       return;
     }
-    if (e.key === "Backspace") {
+    if (key === "Backspace") {
       setCurrentGuess((prev) => prev.slice(0, -1));
       return;
     }
     if (currentGuess.length !== EQUATION_LENGTH) {
-      setCurrentGuess((prev) => prev + e.key);
+      setCurrentGuess((prev) => prev + key);
     }
   };
 

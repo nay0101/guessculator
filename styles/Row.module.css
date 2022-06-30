@@ -1,3 +1,35 @@
 .container {
   display: flex;
 }
+
+.words_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin: 2px;
+  font-size: 1.5rem;
+  width: 2rem;
+  height: 2.5rem;
+  transition: all 1s;
+}
+
+.default_block {
+  background-color: white;
+}
+
+.block_correct {
+  background-color: var(--correct_color);
+  border: 1px solid var(--correct_color);
+}
+
+.block_misplace {
+  background-color: var(--misplace_color);
+  border: 1px solid var(--misplace_color);
+}
+
+.block_wrong {
+  background-color: var(--wrong_color);
+  border: 1px solid var(--wrong_color);
+}

@@ -1,3 +1,56 @@
 .container {
   grid-area: keyboard;
+  display: grid;
+  grid-template-areas:
+    "numbers"
+    "others";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  align-self: flex-start;
+  gap: 0.5rem;
+}
+
+.number {
+  grid-area: numbers;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.other {
+  grid-area: others;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 0.7rem;
+  margin-right: 5px;
+  min-width: max-content;
+  font-size: 1.5rem;
+}
+
+.default_key {
+  background-color: antiquewhite;
+  border: 1px solid antiquewhite;
+}
+
+.key_correct {
+  background-color: var(--correct_color);
+  border: 1px solid var(--correct_color);
+}
+
+.key_misplace {
+  background-color: var(--misplace_color);
+  border: 1px solid var(--misplace_color);
+}
+
+.key_wrong {
+  background-color: var(--wrong_color);
+  border: 1px solid var(--wrong_color);
 }

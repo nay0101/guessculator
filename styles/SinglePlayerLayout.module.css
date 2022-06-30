@@ -4,7 +4,7 @@
     "navbar"
     "frame"
     "keyboard";
-  grid-template-rows: fit-content(100%) 1fr fit-content(100%);
+  grid-template-rows: fit-content(100%) 1fr 1fr;
   grid-template-columns: 1fr;
   justify-items: center;
   width: 100%;
