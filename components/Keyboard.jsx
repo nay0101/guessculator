@@ -71,7 +71,7 @@ const Keyboard = () => {
     <div className={styles.container}>
       <div className={styles.number}>
         {numbers.map((number) => (
-          <div
+          <button
             className={`${styles.key} ${
               usedKeys.correct.includes(number)
                 ? styles.key_correct
@@ -85,12 +85,12 @@ const Keyboard = () => {
             onClick={(e) => handleInput(e, number)}
           >
             {number}
-          </div>
+          </button>
         ))}
       </div>
       <div className={styles.other}>
         {otherkeys.map((key) => (
-          <div
+          <button
             className={`${styles.key} ${
               usedKeys.correct.includes(key)
                 ? styles.key_correct
@@ -104,7 +104,7 @@ const Keyboard = () => {
             onClick={(e) => handleInput(e, key)}
           >
             {key === "Backspace" ? "Delete" : key}
-          </div>
+          </button>
         ))}
       </div>
     </div>

@@ -40,10 +40,6 @@
   cursor: pointer;
 }
 
-.key:hover {
-  box-shadow: 5px 5px 10px black;
-}
-
 .default_key {
   background-color: var(--keyboard_color);
   border: 1px solid var(--keyboard_color);
@@ -87,5 +83,8 @@
   .number,
   .other {
     column-gap: 0.5rem;
+  }
+  .key:hover {
+    box-shadow: 5px 5px 10px black;
   }
 }

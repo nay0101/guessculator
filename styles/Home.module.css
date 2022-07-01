@@ -48,16 +48,8 @@
   background-color: var(--correct_color);
 }
 
-.playbutton:hover {
-  background-color: var(--color_success);
-}
-
 .howToPlayBtn {
   background-color: var(--misplace_color);
-}
-
-.howToPlayBtn:hover {
-  background-color: var(--misplace_hover);
 }
 
 @media (min-width: 426px) and (max-width: 1023px) {
@@ -71,5 +63,13 @@
   .playbutton,
   .howToPlayBtn {
     font-size: 2rem;
+  }
+
+  .playbutton:hover {
+    background-color: var(--color_success);
+  }
+
+  .howToPlayBtn:hover {
+    background-color: var(--misplace_hover);
   }
 }

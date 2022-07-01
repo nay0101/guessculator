@@ -65,10 +65,6 @@
   cursor: pointer;
 }
 
-.closeBtn:hover {
-  color: var(--color_danger);
-}
-
 .nextRoundBtn {
   border: none;
   border-radius: 10px;
@@ -76,10 +72,6 @@
   color: white;
   padding: 0.5rem 1rem;
   cursor: pointer;
-}
-
-.nextRoundBtn:hover {
-  background-color: var(--correct_color);
 }
 
 .resultSection {
@@ -176,5 +168,13 @@
   .wrong {
     width: 2rem;
     height: 2rem;
+  }
+
+  .nextRoundBtn:hover {
+    background-color: var(--correct_color);
+  }
+
+  .closeBtn:hover {
+    color: var(--color_danger);
   }
 }
