@@ -113,6 +113,10 @@
   background-color: var(--wrong_color);
 }
 
+.answer {
+  font-weight: bold;
+}
+
 @media (min-width: 426px) and (max-width: 1023px) {
   .modal {
     width: 60%;

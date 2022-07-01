@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const GameOverModal = () => {
-  const { win, guessedResult, setGameoverModal } = usePlayer();
+  const { win, guessedResult, setGameoverModal, equation } = usePlayer();
   const blocks = [];
   guessedResult.forEach((result, index) => {
     if (result !== null) {
@@ -84,7 +84,7 @@ const GameOverModal = () => {
               </div>
             </>
           )}
-
+          <div className={styles.answer}>Answer: {equation}</div>
           <button className={styles.nextRoundBtn} onClick={goNextGame}>
             Next Game
           </button>
