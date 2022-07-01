@@ -1,4 +1,53 @@
 .container {
   grid-area: navbar;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-bottom: 1px solid var(--keyboard_color);
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: 0.5rem 0;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.titleLetter {
+  font-weight: bold;
+}
+
+.resultBtn {
+  background-color: white;
+  height: 100%;
+  padding: 0.5rem 1rem;
+  border: none;
+}
+
+.resultBtn:hover {
+  cursor: pointer;
+  background-color: var(--keyboard_color);
+}
+
+@media (min-width: 426px) and (max-width: 1023px) {
+}
+
+@media (min-width: 769px) {
+  .container {
+    justify-content: space-evenly;
+  }
+
+  .titleLetter {
+    font-size: 1.2rem;
+  }
+
+  .resultBtn {
+    font-size: 1.2rem;
+  }
 }

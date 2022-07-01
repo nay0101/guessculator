@@ -4,15 +4,8 @@ import { usePlayer } from "../contexts/PlayerContext";
 import Row from "./Row";
 
 const Frame = () => {
-  const {
-    currentIndex,
-    currentGuess,
-    handleInput,
-    guesses,
-    equation,
-    error,
-    setError,
-  } = usePlayer();
+  const { currentIndex, currentGuess, handleInput, guesses, error, setError } =
+    usePlayer();
 
   useEffect(() => {
     if (error) {
@@ -38,9 +31,9 @@ const Frame = () => {
           key={index}
           guess={currentIndex === index ? currentGuess : guess ?? ""}
           isSubmitted={currentIndex !== index && guess !== null}
+          index={index}
         />
       ))}
-      <button onClick={() => console.log(equation)}>Equation</button>
     </div>
   );
 };

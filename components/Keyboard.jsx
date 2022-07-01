@@ -12,7 +12,10 @@ const Keyboard = () => {
 
   useEffect(() => {
     if (guesses[0] !== null) {
-      const guessToCheck = guesses[guesses.indexOf(null) - 1].split("");
+      const guessToCheck =
+        guesses.indexOf(null) >= 0
+          ? guesses[guesses.indexOf(null) - 1].split("")
+          : guesses[guesses.length - 1].split("");
       let temp_equation = equation.split("");
       let correct = [...usedKeys.correct],
         misplace = [...usedKeys.misplace],
@@ -100,11 +103,10 @@ const Keyboard = () => {
             key={key}
             onClick={(e) => handleInput(e, key)}
           >
-            {key === "Backspace" ? "<" : key}
+            {key === "Backspace" ? "Delete" : key}
           </div>
         ))}
       </div>
-      <button onClick={() => console.log(usedKeys)}>Keys</button>
     </div>
   );
 };

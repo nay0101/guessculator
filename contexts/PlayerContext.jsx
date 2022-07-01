@@ -12,18 +12,18 @@ const PlayerProvider = ({ children }) => {
   const [currentGuess, setCurrentGuess] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [guesses, setGuesses] = useState(Array(ROWS_COUNT).fill(null));
-  const [gameOver, setGameover] = useState(false);
+  const [gameover, setGameover] = useState(false);
+  const [win, setWin] = useState(false);
   const [equation, setEquation] = useState("");
   const [error, setError] = useState("");
-
-  useEffect(() => {
-    const equation = generateEquation(8);
-    setEquation(equation);
-  }, []);
+  const [gameoverModal, setGameoverModal] = useState(false);
+  const [guessedResult, setGuessedResult] = useState(
+    Array(ROWS_COUNT).fill(null)
+  );
 
   const handleInput = (e, value = "") => {
     const key = e.key || value;
-    if (gameOver) return;
+    if (gameover) return;
     const eqFilter = /^[0-9+\-*/=]|(Backspace|Enter)+$/;
     const temp_operators = ["+", "-", "*", "/"];
     if (!eqFilter.test(key)) {
@@ -34,9 +34,7 @@ const PlayerProvider = ({ children }) => {
         setError("You need to fill up the squares.");
         return;
       }
-      if (currentIndex === ROWS_COUNT - 1) {
-        setGameover(true);
-      }
+
       if (
         !currentGuess.includes("+") &&
         !currentGuess.includes("-") &&
@@ -111,6 +109,9 @@ const PlayerProvider = ({ children }) => {
       setGuesses(temp_guess);
       if (currentGuess === equation) {
         setGameover(true);
+        setWin(true);
+      } else if (currentIndex === ROWS_COUNT - 1) {
+        setGameover(true);
       }
       setCurrentIndex((prev) => prev + 1);
       setCurrentGuess("");
@@ -123,6 +124,18 @@ const PlayerProvider = ({ children }) => {
     if (currentGuess.length !== EQUATION_LENGTH) {
       setCurrentGuess((prev) => prev + key);
     }
+  };
+
+  const resetEverything = () => {
+    setCurrentGuess("");
+    setCurrentIndex(0);
+    setGuesses(Array(ROWS_COUNT).fill(null));
+    setGameover(false);
+    setWin(false);
+    setEquation("");
+    setError("");
+    setGameoverModal(false);
+    setGuessedResult(Array(ROWS_COUNT).fill(null));
   };
 
   const generateEquation = (length) => {
@@ -295,8 +308,16 @@ const PlayerProvider = ({ children }) => {
     handleInput,
     guesses,
     equation,
+    setEquation,
     error,
     setError,
+    gameover,
+    win,
+    guessedResult,
+    setGuessedResult,
+    gameoverModal,
+    setGameoverModal,
+    resetEverything,
   };
   return (
     <playerContext.Provider value={values}>{children}</playerContext.Provider>

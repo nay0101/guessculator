@@ -16,8 +16,10 @@
   padding: 0.5rem;
   width: fit-content;
   max-width: 50%;
-  background-color: red;
+  color: white;
+  background-color: var(--color_danger);
   border-radius: 10px;
+  z-index: 1;
 }
 
 .errorPopup[data-error="false"] {
@@ -26,4 +28,10 @@
 
 .errorPopup[data-error="true"] {
   visibility: visible;
+}
+
+@media (min-width: 426px) and (max-width: 1023px) {
+}
+
+@media (min-width: 769px) {
 }

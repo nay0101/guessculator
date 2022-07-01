@@ -1,7 +1,18 @@
 :root {
-  --correct_color: green;
-  --misplace_color: yellow;
-  --wrong_color: gray;
+  --correct_color: rgb(48, 167, 48);
+  --misplace_color: rgb(228, 181, 54);
+  --misplace_hover: rgb(255, 205, 66);
+  --wrong_color: rgb(136, 136, 136);
+  --color_success: rgb(0, 197, 0);
+  --color_danger: rgb(255, 70, 70);
+  --keyboard_color: rgb(211, 211, 211);
+  --word_color: black;
+  --guessed_word_color: white;
+  --default_block_color: rgb(241, 241, 241);
+}
+
+:root {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
