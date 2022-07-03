@@ -25,7 +25,7 @@ const HowToPlay = ({ setOpenHowToPlay }) => {
       "Yellow tile means the number is in the wrong spot. Gray tile means the number is not included in the equation. Tiles will only go green if the number is in the correct tile.",
     ],
     [
-      "/keyboardcolors.png",
+      "/keyboard.png",
       "Keyboard will also change color according to your guess.",
     ],
   ];
