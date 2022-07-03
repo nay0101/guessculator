@@ -24,6 +24,7 @@ const SinglePlayerLayout = () => {
       setGameoverModal(true);
     }
   }, [gameover]);
+
   return (
     <div className={styles.wrapper}>
       {gameoverModal ? <GameOverModal /> : ""}

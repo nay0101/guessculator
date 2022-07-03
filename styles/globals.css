@@ -9,6 +9,8 @@
   --word_color: black;
   --guessed_word_color: white;
   --default_block_color: rgb(241, 241, 241);
+  --filled_border_color: black;
+  --empty_border_color: rgb(156, 156, 156);
 }
 
 :root {

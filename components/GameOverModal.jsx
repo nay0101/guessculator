@@ -45,11 +45,13 @@ const GameOverModal = () => {
     <div className={styles.wrapper}>
       <div className={styles.modal}>
         <div className={styles.header}>
-          <FontAwesomeIcon
-            className={styles.closeBtn}
-            icon={faXmark}
-            onClick={closeModal}
-          />
+          <button className={styles.closeBtn}>
+            <FontAwesomeIcon
+              className={styles.closeBtn}
+              icon={faXmark}
+              onClick={closeModal}
+            />
+          </button>
         </div>
         <div className={styles.body}>
           {win ? (

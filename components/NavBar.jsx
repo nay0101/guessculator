@@ -4,7 +4,6 @@ import logo from "../public/Guessculator-round.png";
 import { usePlayer } from "../contexts/PlayerContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBarChart } from "@fortawesome/free-regular-svg-icons";
-import Link from "next/link";
 import { useRouter } from "next/router";
 
 const NavBar = () => {

@@ -7,10 +7,10 @@ import { useState } from "react";
 import HowToPlay from "./HowToPlay";
 
 const HomeLayout = () => {
-  // const [openHowToPlay, setOpenHowToPlay] = useState(false);
+  const [openHowToPlay, setOpenHowToPlay] = useState(false);
   return (
     <div className={styles.wrapper}>
-      {/* {openHowToPlay ? <HowToPlay setOpenHowToPlay={setOpenHowToPlay} /> : ""} */}
+      {openHowToPlay ? <HowToPlay setOpenHowToPlay={setOpenHowToPlay} /> : ""}
       <NavBar />
       <div className={styles.title}>
         <Image src={logo} width={100} height={100} alt="logo" />
@@ -20,12 +20,12 @@ const HomeLayout = () => {
         <Link href="/singleplayer">
           <button className={styles.playbutton}>Play</button>
         </Link>
-        {/* <button
+        <button
           className={styles.howToPlayBtn}
           onClick={() => setOpenHowToPlay(true)}
         >
           How To Play
-        </button> */}
+        </button>
       </div>
     </div>
   );

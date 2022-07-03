@@ -32,7 +32,12 @@ const Row = ({ guess, isSubmitted, index }) => {
           temp_colorWords.push(g.state);
       }
       temp_words.push(
-        <div className={`${styles.words_container} ${className}`} key={i}>
+        <div
+          className={`${styles.words_container} ${className} ${
+            g.value ? styles.filled : styles.notfilled
+          }`}
+          key={i}
+        >
           {g.value}
         </div>
       );
