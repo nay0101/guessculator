@@ -35,9 +35,6 @@
   background-color: var(--keyboard_color);
 }
 
-@media (min-width: 426px) and (max-width: 1023px) {
-}
-
 @media (min-width: 769px) {
   .container {
     justify-content: space-evenly;

@@ -52,7 +52,7 @@
   background-color: var(--misplace_color);
 }
 
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 426px) and (max-width: 768px) {
   .playbutton,
   .howToPlayBtn {
     font-size: 1.7rem;

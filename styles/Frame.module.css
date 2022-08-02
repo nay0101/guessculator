@@ -29,9 +29,3 @@
 .errorPopup[data-error="true"] {
   visibility: visible;
 }
-
-@media (min-width: 426px) and (max-width: 1023px) {
-}
-
-@media (min-width: 769px) {
-}

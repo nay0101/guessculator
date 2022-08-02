@@ -50,7 +50,7 @@
   animation: flip 0.5s ease forwards;
 }
 
-@media (min-width: 426px) and (max-width: 1023px) {
+@media (min-width: 426px) and (max-width: 768px) {
   .words_container {
     width: 3rem;
     height: 3rem;
